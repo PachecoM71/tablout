@@ -448,8 +448,8 @@ export default function FloorCanvas({ isMobile = false }) {
         {/* Empty state */}
         {tables.length === 0 && (
           <div className="absolute left-[400px] top-[300px] flex flex-col items-center gap-4 opacity-25 pointer-events-none">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-[#3A3A38]">
-              <path d="m12 19 7-7 3 3-7 7-3-3z"/><path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="m2 2 7.586 7.586"/><circle cx="11" cy="11" r="2"/>
+            <svg width="48" height="48" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="16" cy="16" r="7" fill="none" stroke="#3A3A38" strokeWidth="1.5"/><circle cx="16" cy="7" r="2" fill="#3A3A38"/><circle cx="22.4" cy="10.3" r="2" fill="#3A3A38"/><circle cx="22.4" cy="21.7" r="2" fill="#3A3A38"/><circle cx="16" cy="25" r="2" fill="#3A3A38"/><circle cx="9.6" cy="21.7" r="2" fill="#3A3A38"/><circle cx="9.6" cy="10.3" r="2" fill="#3A3A38"/>
             </svg>
             <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-[#3A3A38] text-center">
               Select a shape above<br />then click "+ Add Table"

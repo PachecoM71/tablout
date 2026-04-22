@@ -27,8 +27,8 @@ export default function Toolbar({ isMobile = false }) {
         <div className="h-12 flex items-center justify-between px-3 gap-2">
           {/* Logo */}
           <div className="flex items-center gap-1.5 shrink-0">
-            <div className="w-7 h-7 bg-[#1A3C2B] flex items-center justify-center rounded-[2px]">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m12 19 7-7 3 3-7 7-3-3z"/><path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="m2 2 7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+            <div className="w-7 h-7 shrink-0">
+              <svg width="28" height="28" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="6" fill="#1A3C2B"/><circle cx="16" cy="16" r="7" fill="none" stroke="#F5F4F0" strokeWidth="1.5"/><circle cx="16" cy="7" r="2" fill="#FF8C69"/><circle cx="22.4" cy="10.3" r="2" fill="#FF8C69"/><circle cx="22.4" cy="21.7" r="2" fill="#9EFFBF"/><circle cx="16" cy="25" r="2" fill="#9EFFBF"/><circle cx="9.6" cy="21.7" r="2" fill="#F5F4F0" opacity="0.6"/><circle cx="9.6" cy="10.3" r="2" fill="#F5F4F0" opacity="0.6"/></svg>
             </div>
             <span className="font-display text-[13px] font-bold text-[#1A3C2B] tracking-tight">tablout</span>
           </div>
@@ -142,8 +142,8 @@ export default function Toolbar({ isMobile = false }) {
     <header className="h-14 border-b border-[#3A3A38]/10 flex items-center justify-between px-3 xl:px-6 shrink-0 bg-[#F5F4F0] z-20">
       <div className="flex items-center gap-3 xl:gap-8">
         <div className="flex items-center gap-2 xl:gap-3">
-          <div className="w-8 h-8 bg-[#1A3C2B] flex items-center justify-center rounded-[2px] shrink-0">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m12 19 7-7 3 3-7 7-3-3z"/><path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="m2 2 7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+          <div className="w-8 h-8 shrink-0">
+            <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="6" fill="#1A3C2B"/><circle cx="16" cy="16" r="7" fill="none" stroke="#F5F4F0" strokeWidth="1.5"/><circle cx="16" cy="7" r="2" fill="#FF8C69"/><circle cx="22.4" cy="10.3" r="2" fill="#FF8C69"/><circle cx="22.4" cy="21.7" r="2" fill="#9EFFBF"/><circle cx="16" cy="25" r="2" fill="#9EFFBF"/><circle cx="9.6" cy="21.7" r="2" fill="#F5F4F0" opacity="0.6"/><circle cx="9.6" cy="10.3" r="2" fill="#F5F4F0" opacity="0.6"/></svg>
           </div>
           <span className="font-display text-[15px] font-bold text-[#1A3C2B] tracking-tight mr-1">tablout</span>
           <div className="w-px h-5 bg-[#3A3A38]/10" />
