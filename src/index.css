@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+
+  body {
+    font-family: 'General Sans', system-ui, -apple-system, sans-serif;
+    background: #F5F4F0;
+    min-height: 100vh;
+    color: #3A3A38;
+  }
+
+  #root { min-height: 100vh; }
+
+  .font-mono { font-family: 'JetBrains Mono', monospace; }
+  .font-display { font-family: 'Space Grotesk', sans-serif; }
+  .font-body { font-family: 'General Sans', sans-serif; }
+}
+
+@layer components {
+  /* Blueprint grid canvas */
+  .blueprint-grid {
+    background-color: #F5F4F0;
+    background-image:
+      linear-gradient(to right, rgba(58,58,56,0.15) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(58,58,56,0.15) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  /* Table surfaces — architectural container style */
+  .table-surface {
+    border: 2.5px solid #1A3C2B;
+    background: rgba(26, 60, 43, 0.04);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease;
+  }
+
+  /* Corner brackets for selected tables */
+  .corner-bracket {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border: 1.5px solid #1A3C2B;
+    opacity: 0.6;
+    pointer-events: none;
+  }
+  .bracket-tl { top: -10px; left: -10px; border-right: 0; border-bottom: 0; }
+  .bracket-tr { top: -10px; right: -10px; border-left: 0; border-bottom: 0; }
+  .bracket-bl { bottom: -10px; left: -10px; border-right: 0; border-top: 0; }
+  .bracket-br { bottom: -10px; right: -10px; border-left: 0; border-top: 0; }
+
+  /* Segmented toolbar buttons */
+  .segmented-btn {
+    border-right: 1px solid rgba(58, 58, 56, 0.1);
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s ease;
+    cursor: pointer;
+    gap: 6px;
+  }
+  @media (min-width: 1280px) {
+    .segmented-btn { padding: 8px 14px; }
+  }
+  .segmented-btn:last-child { border-right: 0; }
+  .segmented-btn:hover { background: rgba(58, 58, 56, 0.05); }
+  .segmented-btn.active { background: #1A3C2B; color: #fff; }
+
+  /* Seat card transitions */
+  .seat-slot > div {
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Custom scrollbar */
+  .custom-scrollbar::-webkit-scrollbar { width: 3px; }
+  .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+  .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(58,58,56,0.15); border-radius: 10px; }
+}
+
+/* Seat highlight — needs !important to override inline styles during drag */
+.seat-highlight {
+  outline: 2px solid #1A3C2B !important;
+  outline-offset: 2px;
+  background: rgba(26, 60, 43, 0.08) !important;
+}
+
+@layer components {
+  /* Safe area bottom padding for mobile nav */
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+}
+
