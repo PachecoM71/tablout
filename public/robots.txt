@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tablout.com/sitemap.xml
+Sitemap: https://www.tablout.com/sitemap.xml
