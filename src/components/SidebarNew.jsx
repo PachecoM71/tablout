@@ -3,7 +3,13 @@ import useStore, { GROUPS, getGroupColor } from '../store/useStore'
 import { Plus, X, ChevronDown, ChevronRight } from 'lucide-react'
 
 export default function SidebarNew({ isMobile = false }) {
-  const { guests, tables, groups, addGuest, removeGuest, addGroup, removeGroup } = useStore()
+  const guests = useStore(s => s.guests)
+  const tables = useStore(s => s.tables)
+  const groups = useStore(s => s.groups)
+  const addGuest = useStore(s => s.addGuest)
+  const removeGuest = useStore(s => s.removeGuest)
+  const addGroup = useStore(s => s.addGroup)
+  const removeGroup = useStore(s => s.removeGroup)
   const [name, setName] = useState('')
   const [selectedGroup, setSelectedGroup] = useState('Friends')
   const [showGroupPicker, setShowGroupPicker] = useState(false)

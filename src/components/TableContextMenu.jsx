@@ -19,7 +19,11 @@ function getSidesForShape(shape) {
 }
 
 export default function TableContextMenu({ table }) {
-  const { renameTable, addSeatToTable, removeSeatFromTable, changeTableShape, rotateTable } = useStore()
+  const renameTable = useStore(s => s.renameTable)
+  const addSeatToTable = useStore(s => s.addSeatToTable)
+  const removeSeatFromTable = useStore(s => s.removeSeatFromTable)
+  const changeTableShape = useStore(s => s.changeTableShape)
+  const rotateTable = useStore(s => s.rotateTable)
   const [isRenaming, setIsRenaming] = useState(false)
   const [labelDraft, setLabelDraft] = useState(table.label)
 

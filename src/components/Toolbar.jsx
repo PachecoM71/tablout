@@ -8,7 +8,14 @@ const SHAPES = SHAPE_LIST
 const BMC_URL = 'https://buymeacoffee.com/henmar28'
 
 export default function Toolbar({ isMobile = false }) {
-  const { activeShape, setActiveShape, zoom, setZoom, autoAssign, resetAll, eventName, setEventName } = useStore()
+  const activeShape = useStore(s => s.activeShape)
+  const setActiveShape = useStore(s => s.setActiveShape)
+  const zoom = useStore(s => s.zoom)
+  const setZoom = useStore(s => s.setZoom)
+  const autoAssign = useStore(s => s.autoAssign)
+  const resetAll = useStore(s => s.resetAll)
+  const eventName = useStore(s => s.eventName)
+  const setEventName = useStore(s => s.setEventName)
   const [showMobileMenu, setShowMobileMenu] = useState(false)
   const [showShapePicker, setShowShapePicker] = useState(false)
 

@@ -4,7 +4,20 @@ import TableRenderer from './tables/TableRenderer'
 import TableContextMenu from './TableContextMenu'
 
 export default function FloorCanvas({ isMobile = false }) {
-  const { tables, guests, zoom, pan, setZoom, setPan, moveTable, scaleTable, rotateTable, duplicateTable, selectedTableId, setSelectedTable, removeTable, seatGuest } = useStore()
+  const tables = useStore(s => s.tables)
+  const guests = useStore(s => s.guests)
+  const zoom = useStore(s => s.zoom)
+  const pan = useStore(s => s.pan)
+  const setZoom = useStore(s => s.setZoom)
+  const setPan = useStore(s => s.setPan)
+  const moveTable = useStore(s => s.moveTable)
+  const scaleTable = useStore(s => s.scaleTable)
+  const rotateTable = useStore(s => s.rotateTable)
+  const duplicateTable = useStore(s => s.duplicateTable)
+  const selectedTableId = useStore(s => s.selectedTableId)
+  const setSelectedTable = useStore(s => s.setSelectedTable)
+  const removeTable = useStore(s => s.removeTable)
+  const seatGuest = useStore(s => s.seatGuest)
   const canvasRef = useRef(null)
   const floorRef = useRef(null)
   const [draggingTable, setDraggingTable] = useState(null)
